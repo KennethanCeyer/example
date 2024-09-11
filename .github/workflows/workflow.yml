@@ -7,5 +7,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: ech
+      - run: pip install pytest
+      - run: PYTHONPATH=$(pwd) pytest tests
 
